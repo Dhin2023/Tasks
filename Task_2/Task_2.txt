@@ -1,0 +1,89 @@
+                                                                                      TASK_2
+QUESTION 1:
+-------------------------
+
+CREATE DATABASE Product_db;  
+
+QUESTION 2:
+-------------------------
+CREATE TABLE Product(
+	product_id int,
+	product varchar(10),
+	quantity int,
+	price int,
+    purchase_cost integer,
+    estimated_sale_price float
+);
+
+QUESTION 3:
+-------------------------
+Select * from Product;
+
+QUESTION 4:
+-------------------------
+INSERT INTO Product (product_id, product, quantity, price, purchase_cost, estimated_sale_price) VALUES (1, 'paycard', 2, 300, 8000, 9000.56);
+INSERT INTO Product (product_id, product, quantity, price, purchase_cost, estimated_sale_price) VALUES (2, 'paypoints', 4, 200, 7000, 6700.56);
+
+QUESTION 5:
+-------------------------
+ALTER TABLE Product ADD COLUMN location varchar(50);
+
+QUESTION 6:
+-------------------------
+UPDATE Product
+SET location = 'USA'
+WHERE Product_id = 1;
+update Product
+SET location = 'India'
+WHERE Product_id = 2;
+
+QUESTION 7:
+-------------------------
+USA
+
+QUESTION 8:
+-------------------------
+UPDATE product
+set product = 'varchar(25)';
+
+QUESTION 9:
+-------------------------
+ALTER TABLE Product MODIFY location VARCHAR(20) ;
+
+QUESTION 10:
+-------------------------
+UPDATE product
+SET quantity = 10
+WHERE product = 'paycard';
+
+QUESTION 11:
+-------------------------
+INSERT INTO Product (product_id, product, quantity, price, purchase_cost, estimated_sale_price, location) VALUES (4, 'creditcard', 2, 500, 900, 750, 'india');
+
+
+QUESTION 12:
+-------------------------
+INSERT INTO Product (product_id, product, quantity, price, purchase_cost, estimated_sale_price, location)
+VALUES (5, 'debitcard', 4, 500, 2000, 1850, 'UK'),
+(6, 'buyback', 20, 500, 10000, 9800.95, 'USA');
+
+QUESTION 13:
+-------------------------
+ALTER TABLE Product ADD COLUMN zip_code int(10);
+
+QUESTION 14:
+-------------------------
+UPDATE Product
+SET zip_code = 600023
+WHERE Product_id = 1;
+update Product
+SET location = 600013
+WHERE Product_id = 2;
+
+QUESTION 15:
+-------------------------
+ALTER TABLE Product
+DROP COLUMN zip_code;
+
+
+
